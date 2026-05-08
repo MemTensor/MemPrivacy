@@ -1,0 +1,78 @@
+openai_base_url: ""
+openai_api_key: ""
+
+embedding_model: 
+  model: "text-embedding-3-small"
+  dimensions: 1536
+
+memory_llm:
+  model: "gpt-4.1-2025-04-14"
+  input_max_tokens: 128000
+  max_tokens: 32768
+  temperature: 0
+  timeout: 300
+  retry_times: 3
+  wait_time_lower: 10
+  wait_time_upper: 30
+
+answer_llm:
+  model: "gpt-4.1-2025-04-14"
+  max_tokens: 32768
+  temperature: 0
+  timeout: 300
+  retry_times: 5
+  wait_time_lower: 30
+  wait_time_upper: 60
+
+judgment_llm:
+  model: "gpt-5.2"
+  max_tokens: 32768
+  temperature: 0.0
+  timeout: 800
+  retry_times: 10
+  wait_time_lower: 30
+  wait_time_upper: 60
+
+privacy_llm:
+  base_url: ""
+  api_key: ""
+  model: ""
+  max_tokens: 8192
+  temperature: 0.0
+  timeout: 120
+  retry_times: 3
+  wait_time_lower: 10
+  wait_time_upper: 30
+
+GPT_5.2:
+  model: "gpt-5.2"
+  max_tokens: 32768
+  temperature: 0.0
+  timeout: 300
+  retry_times: 10
+  wait_time_lower: 30
+  wait_time_upper: 60
+
+mem0_config:
+  db_path: "tmp2/mem0_db"
+  retry_times: 5
+  wait_time_lower: 10
+  wait_time_upper: 20
+
+memobase:
+  project_url: "http://localhost:8019"
+  api_key: "secret"
+  retry_times: 5
+  wait_time_lower: 10
+  wait_time_upper: 20
+
+privacy:
+  db_path: "tmp2/privacy_store"
+  prompt_path: "prompts/extract_privacy.txt"
+
+prompts:
+  answer_prompt_1: "prompts/answer_prompt_1.txt"
+  answer_prompt_2: "prompts/answer_prompt_2.txt"
+  judge_prompt: "prompts/judge_prompt.txt"
+
+output_path: "results"

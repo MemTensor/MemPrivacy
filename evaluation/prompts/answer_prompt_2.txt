@@ -1,0 +1,32 @@
+You are an assistant that selects the most appropriate answer for a user based on their query and known preferences.
+
+Query:
+{question}
+
+Relevant User Memory:
+{user_memories}
+
+Candidate Answers:
+{options_text}
+
+Task:
+Choose the answer that best fits the query while considering the user's preferences and past behavior from the provided memory.
+
+Instructions:
+- Carefully consider the user's memory when making your choice.
+- You must strictly base your selection only on the provided memory and options; do not make assumptions, guesses, or introduce any information not explicitly supported by the memory.
+- Select the single best option.
+- Provide a short reason explaining why the selected option best matches the user's query and preferences.
+
+Output Format:
+Return your answer strictly in JSON format with the following fields:
+
+{{
+  "answer": "<LETTER>",
+  "reason": "<short explanation>"
+}}
+
+Rules:
+- "answer" must be one of the option letters (e.g., A, B, C, D).
+- The explanation should be concise (1–2 sentences).
+- Do not output anything other than the JSON object.

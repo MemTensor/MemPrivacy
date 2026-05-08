@@ -1,0 +1,18 @@
+llm:
+  base_url: ""
+  api_key: ""
+  model: ""
+  max_tokens: 8192
+  temperature: 0.0
+  timeout: 120
+  retry_times: 3
+  wait_time_lower: 10
+  wait_time_upper: 30
+
+privacy:
+  db_path: "privacy_store.db"
+  prompt_path: "prompts/extract_privacy.txt"
+  mask_levels:
+    - "PL4"
+    - "PL3"
+    # - "PL2"
