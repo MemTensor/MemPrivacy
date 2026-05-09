@@ -12,7 +12,7 @@
 <a href="https://arxiv.org/">
      <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=flat-square&logo=arxiv&logoColor=white">
 </a>
-<a href="https://huggingface.co/">
+<a href="https://huggingface.co/collections/IAAR-Shanghai/memprivacy">
     <img alt="Huggingface" src="https://img.shields.io/badge/🤗_Huggingface-Model-ff9800.svg">
 </a>
 </p>
