@@ -91,7 +91,7 @@ This yields **architecture-level isolation**: cloud components never see/store r
 ### 1) Privacy–Utility Balance (vs. masking)
 - **Irreversible masking** (`***`) protects privacy but loses meaning and breaks memory retrieval.
 - **Untyped placeholders** (`<Mask_1>`) keep structure but lose semantic roles.
-- **MemPrivacy typed placeholders** preserve the semantic role *and* hide raw values, minimizing utility loss.
+- **MemPrivacy (typed placeholders)** preserve the semantic role *and* hide raw values, minimizing utility loss.
 
 ### 2) Configurable Protection via a 4-Level Privacy Taxonomy
 MemPrivacy introduces **PL1–PL4** to support user-configurable policies:
@@ -113,7 +113,52 @@ The framework is designed for **edge deployment**:
 - local detection + placeholder substitution + SQLite lookup are low-latency operations
 - works as a drop-in privacy layer for existing cloud agents / memory systems
 
+### 5) Open-Source MemPrivacy Models
+We release a family of MemPrivacy models trained via Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) across different parameter sizes. You can access the full model collection [here](https://huggingface.co/collections/IAAR-Shanghai/memprivacy).
+
+| Model Name | Parameters | Method | HuggingFace Link |
+| :--- | :---: | :---: | :--- |
+| 🤗 **MemPrivacy-4B-RL** | 4B | RL | [IAAR-Shanghai/MemPrivacy-4B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-RL) |
+| 🤗 **MemPrivacy-4B-SFT** | 4B | SFT | [IAAR-Shanghai/MemPrivacy-4B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-SFT) |
+| 🤗 **MemPrivacy-1.7B-RL** | 1.7B | RL | [IAAR-Shanghai/MemPrivacy-1.7B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-RL) |
+| 🤗 **MemPrivacy-1.7B-SFT** | 1.7B | SFT | [IAAR-Shanghai/MemPrivacy-1.7B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-SFT) |
+
 ---
+
+## Evaluation Results
+
+### 1. Privacy Extraction Performance
+
+<div align="center">
+    <em><strong>Table 1.</strong> Performance comparison of different LLMs and MemPrivacy models on MemPrivacy-Bench and PersonaMem-v2.</em>
+    <img src="assets\table1.png" width="100%" alt="Performance comparison of different LLMs and MemPrivacy models on MemPrivacy-Bench and PersonaMem-v2.">
+    <br>
+</div>
+
+
+**Key Takeaways:**
+
+* **Superior Accuracy:** MemPrivacy consistently outperforms 11 general LLMs and **OpenAI-Privacy-Filter**. The best model (MemPrivacy-4B-RL) achieves F1 scores of **85.97%** and **94.48%**, significantly surpassing the top general models (78.41% and 92.18%). Even our smallest 0.6B model beats most general models.
+* **Robustness on Complex Data:** While lightweight filters like OpenAI-Privacy-Filter are fast, they struggle with implicit and linguistically diverse privacy expressions (only 35.50% F1 on MemPrivacy-Bench). MemPrivacy accurately handles fine-grained, heterogeneous conversational scenarios.
+* **High Efficiency:** Despite its accuracy, MemPrivacy remains highly efficient. Processing latency per message is consistently **below one second** on PersonaMem-v2, making it well-suited for seamless on-device deployment without noticeable delays.
+
+### 2. Memory System Performance under Different Protection Methods
+
+<div align="center">
+    <em><strong>Table 2.</strong> Performance comparison under different privacy protection methods on three memory systems.</em>
+    <img src="assets\table2.png" width="100%" alt="Performance comparison under different privacy protection methods on three memory systems.">
+    <br>
+</div>
+
+
+**Key Takeaways:**
+
+* **Optimal Privacy-Utility Trade-off:** Compared to traditional masking (`***`) or untyped placeholders (`<Mask_1>`), MemPrivacy preserves the utility of downstream systems (LangMem, Mem0, Memobase) significantly better by retaining critical semantic roles.
+* **Minimal Degradation:** When applying stringent protection (PL2–PL4), system accuracy drops by merely **0.71%–1.60%**. If protecting only critical secrets (PL4), the drop is **below 0.89%**. 
+* **Extractor Dependency:** The effectiveness of the entire framework heavily depends on accurate privacy extraction. Replacing the MemPrivacy model with general LLMs (e.g., DeepSeek-V3.2-Think, GPT-5.2) causes substantial accuracy degradation, validating the necessity of our specialized fine-tuning.
+
+---
+
 
 ## What’s in This Repository?
 
