@@ -293,7 +293,15 @@ You can enforce a masking threshold such as:
 If you use MemPrivacy-Bench, the taxonomy, or the framework, please cite:
 
 ```bibtex
-
+@misc{chen2026memprivacyprivacypreservingpersonalizedmemory,
+      title={MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents}, 
+      author={Yining Chen and Jihao Zhao and Bo Tang and Haofen Wang and Feiyu Xiong and Zhiyu Li},
+      year={2026},
+      eprint={2605.09530},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2605.09530}, 
+}
 ```
 
 ---
