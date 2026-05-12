@@ -8,10 +8,10 @@
 </a>
 <a href="https://github.com/MemTensor/MemPrivacy/issues">
     <img alt="GitHub Issues" src="https://img.shields.io/github/issues/MemTensor/MemPrivacy?color=blueviolet">
-<!-- </a>
-<a href="https://arxiv.org/">
+</a>
+<a href="https://arxiv.org/abs/2605.09530">
      <img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=flat-square&logo=arxiv&logoColor=white">
-</a> -->
+</a>
 <a href="https://huggingface.co/collections/IAAR-Shanghai/memprivacy">
     <img alt="Huggingface" src="https://img.shields.io/badge/🤗_Huggingface-Model-ff9800.svg">
 </a>
