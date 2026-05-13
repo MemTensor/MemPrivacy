@@ -21,6 +21,12 @@
 MemPrivacy is a **privacy-preserving personalized memory management framework** for **edge-cloud agents**.
 It lets cloud-based LLM agents retain long-term personalization signals by replacing sensitive spans with **semantically meaningful typed placeholders** before data leaves the device, and **restoring** the original values locally after the cloud response returns—so **raw privacy values are never stored or exposed in the cloud**.
 
+
+
+https://github.com/user-attachments/assets/cf217065-414f-44ed-b4ca-677ad5844dc0
+
+
+
 ---
 
 ## Why MemPrivacy?
