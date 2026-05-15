@@ -16,7 +16,7 @@
     <img alt="Huggingface" src="https://img.shields.io/badge/🤗_Huggingface-Model-ff9800.svg">
 </a>
 <a href="https://modelscope.cn/collections/MemTensor/MemPrivacy">
-    <img alt="ModelScope" src="https://img.shields.io/badge/ModelScope-Model-7B42BC?style=flat-square">
+    <img alt="ModelScope" src="https://img.shields.io/badge/🤖_ModelScope-Model-7B42BC?style=flat-square">
 </a>
 </p>
 
