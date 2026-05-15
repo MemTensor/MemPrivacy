@@ -15,6 +15,9 @@
 <a href="https://huggingface.co/collections/IAAR-Shanghai/memprivacy">
     <img alt="Huggingface" src="https://img.shields.io/badge/🤗_Huggingface-Model-ff9800.svg">
 </a>
+<a href="https://modelscope.cn/collections/MemTensor/MemPrivacy">
+    <img alt="ModelScope" src="https://img.shields.io/badge/ModelScope-Model-7B42BC?style=flat-square">
+</a>
 </p>
 
 
@@ -115,14 +118,14 @@ The framework is designed for **edge deployment**:
 - works as a drop-in privacy layer for existing cloud agents / memory systems
 
 ### 5) Open-Source MemPrivacy Models
-We release a family of MemPrivacy models trained via Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) across different parameter sizes. You can access the full model collection [here](https://huggingface.co/collections/IAAR-Shanghai/memprivacy).
+We release a family of MemPrivacy models trained via Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) across different parameter sizes. You can access the full model collections on [Hugging Face](https://huggingface.co/collections/IAAR-Shanghai/memprivacy) and [ModelScope](https://modelscope.cn/collections/MemTensor/MemPrivacy).
 
-| Model Name | Parameters | Method | HuggingFace Link |
-| :--- | :---: | :---: | :--- |
-| 🤗 **MemPrivacy-4B-RL** | 4B | RL | [IAAR-Shanghai/MemPrivacy-4B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-RL) |
-| 🤗 **MemPrivacy-4B-SFT** | 4B | SFT | [IAAR-Shanghai/MemPrivacy-4B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-SFT) |
-| 🤗 **MemPrivacy-1.7B-RL** | 1.7B | RL | [IAAR-Shanghai/MemPrivacy-1.7B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-RL) |
-| 🤗 **MemPrivacy-1.7B-SFT** | 1.7B | SFT | [IAAR-Shanghai/MemPrivacy-1.7B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-SFT) |
+| Model Name | Parameters | Method | HuggingFace Link | ModelScope Link |
+| :--- | :---: | :---: | :--- | :--- |
+| **MemPrivacy-4B-RL** | 4B | RL | [🤗 MemPrivacy-4B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-RL) | [🤖 MemPrivacy-4B-RL](https://modelscope.cn/models/MemTensor/MemPrivacy-4B-RL) |
+| **MemPrivacy-4B-SFT** | 4B | SFT | [🤗 MemPrivacy-4B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-4B-SFT) | [🤖 MemPrivacy-4B-SFT](https://modelscope.cn/models/MemTensor/MemPrivacy-4B-SFT) |
+| **MemPrivacy-1.7B-RL** | 1.7B | RL | [🤗 MemPrivacy-1.7B-RL](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-RL) | [🤖 MemPrivacy-1.7B-RL](https://modelscope.cn/models/MemTensor/MemPrivacy-1.7B-RL) |
+| **MemPrivacy-1.7B-SFT** | 1.7B | SFT | [🤗 MemPrivacy-1.7B-SFT](https://huggingface.co/IAAR-Shanghai/MemPrivacy-1.7B-SFT) | [🤖 MemPrivacy-1.7B-SFT](https://modelscope.cn/models/MemTensor/MemPrivacy-1.7B-SFT) |
 
 ---
 
