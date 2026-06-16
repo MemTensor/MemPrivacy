@@ -5,7 +5,6 @@ env/
 ENV/
 
 # Large data files
-data/*
 evaluation/results/*
 
 # Environment variable files
