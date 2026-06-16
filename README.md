@@ -170,8 +170,9 @@ High-level structure:
 
 ```text
 MemPrivacy/
-├── evaluation/              # evaluation on memory systems + metrics
-└── src/                     # privacy masking/pseudonymization core
+├── data/        # partial user data from the MemPrivacy-Bench and PersonaMem-v2 test sets
+├── evaluation/  # evaluation on memory systems + metrics
+└── src/         # privacy masking/pseudonymization core
 ```
 
 ### Core Components
